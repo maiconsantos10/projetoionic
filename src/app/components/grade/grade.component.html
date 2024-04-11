@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="text-align: center; font-family: Mont serrat">Livros mais vistos</ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+
+
+
+
+
+
+<div class="grade">
+  
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngFor="let livro of livros" size="7">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>{{ livro.titulo }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <img [src]="livro.capa" alt="{{ livro.titulo }}" class="colored-font">
+          <p class="colored-font"> Autor: {{ livro.autor }}</p>
+          <ion-button (click)="adicionarFavorito(livro)">Favoritar</ion-button>
+        </ion-card-content>
+      </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+    
+        
